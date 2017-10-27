@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>{{h1}}</h2>
+  <a href="/add"><button type="submit" class="btn btn-info">add</button></a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nama lengkap</th>
+        <th>Email</th>
+        <th>Nomer telephone</th>
+        <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each data}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{email}}</td>
+        <td>{{number_phone}}</td>
+        <td>
+          <a href="../update/{{id}}"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span></button></a>
+          <a href="../delete/{{id}}"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
